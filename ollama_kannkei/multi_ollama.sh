@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source ../.venv/bin/activate
+
+bash stop_containers.sh
+
+bash start_containers.sh
+sleep 5
+#python makedata/ollama_fc_make_test.py
+python /home/ubuntu/client/Data_azami/code/makedata/generate_test.py
+sleep 5
+bash stop_containers.sh
